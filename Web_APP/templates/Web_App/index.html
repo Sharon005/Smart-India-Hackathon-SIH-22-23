@@ -13,7 +13,7 @@
     <title>Home Page</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="{% static "vendor/bootstrap/css/bootstrap.min.css" %}" rel="stylesheet">
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
 
     <!-- Additional CSS Files -->
     <link rel="stylesheet" href="{% static 'CSS/fontawesome.css' %}">
@@ -65,9 +65,9 @@
                           <li class="has-sub">
                               <a href="javascript:void(0)">Information</a>
                               <ul class="sub-menu">
-                                  <li><a href="{% url "Web_APP:crops" %}">Crops</a></li>
-                                  <li><a href="{% url "Web_APP:crops" %}">Seeds</a></li>
-                                  <li><a href="{% url "Web_APP:crops" %}">Tools/Instruments</a></li>
+                                  <li><a href="{% url 'Web_APP:crops' %}">Crops</a></li>
+                                  <li><a href="{% url 'Web_APP:crops' %}">Seeds</a></li>
+                                  <li><a href="{% url 'Web_APP:crops' %}">Tools/Instruments</a></li>
                               </ul>
                           </li>
                           <li class="scroll-to-section"><a href="#courses">Blog</a></li> 
@@ -87,7 +87,7 @@
   <!-- ***** Main Banner Area Start ***** -->
   <section class="section main-banner" id="top" data-section="section1">
       <video autoplay muted loop id="bg-video">
-          <source src="{% static "images1/farmbg1.mp4" %}" type="video/mp4" />
+          <source src="{% static 'images1/farmbg1.mp4' %}" type="video/mp4" />
       </video>
 
       <div class="video-overlay header-text">
@@ -236,7 +236,12 @@
     </div>
   </section>
 
-  
+  <section class="disease">
+    <div class="container">
+      
+    </div>
+
+  </section>
 
   <!-- Scripts -->
   <!-- Bootstrap core JavaScript -->

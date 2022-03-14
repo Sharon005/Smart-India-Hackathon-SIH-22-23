@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.views.generic import ListView, DetailView
 from .models import *
 # Create your views here.
 
@@ -13,3 +14,9 @@ def meetings(request):
 
 def meeting_d(request):
     return render(request, 'Web_App/meeting-details.html')
+
+class WheatDView(ListView):
+    model = Wheat_Disease
+
+class WheatView(DetailView):
+    model = Wheat_Disease

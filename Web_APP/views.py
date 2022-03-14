@@ -9,8 +9,8 @@ def home(request):
 def crops(request):
     return render(request, 'Web_App/crops.html')
 
-def meetings(request):
-    return render(request, 'Web_App/meetings.html')
+def disease(request):
+    return render(request, 'Web_App/disease.html')
 
 def meeting_d(request):
     return render(request, 'Web_App/meeting-details.html')

@@ -7,7 +7,7 @@ app_name = 'Web_APP'
 urlpatterns = [
     path('', views.home, name="home"),
     path('crops', views.crops, name="crops"),
-    path('meetings', views.meetings, name="meetings"),
+    path('disease', views.disease, name="disease"),
     path('meeting_d', views.meeting_d, name="meeting_d"),
 
     url(r'^wheat_disease/$', views.WheatDView.as_view(), name='wheat'),

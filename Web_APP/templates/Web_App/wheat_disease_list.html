@@ -8,6 +8,7 @@
     <title>Document</title>
 </head>
 <body>
+    
     {% for wheat_disease in wheat_disease_list %}
     <ul>
         <li><a href="{% url 'Web_APP:wheat_disease' wheat_disease.slug %}">{{ wheat_disease.name }}</a>

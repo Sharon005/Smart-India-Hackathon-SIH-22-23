@@ -8,7 +8,7 @@ urlpatterns = [
     path('', views.home, name="home"),
     path('crops', views.crops, name="crops"),
     path('disease', views.disease, name="disease"),
-    path('meeting_d', views.meeting_d, name="meeting_d"),
+    path('crop_result', views.crop_result, name="crop_result"),
 
     url(r'^wheat_disease/$', views.WheatDView.as_view(), name='wheat'),
     url(r'^wheat_disease/(?P<slug>[A-Za-z0-9_-]+)/$', views.WheatView.as_view(), name='wheat_disease'),

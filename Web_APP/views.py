@@ -35,6 +35,35 @@ def crop_result(request):
 
 class WheatDView(ListView):
     model = Wheat_Disease
-
 class WheatView(DetailView):
     model = Wheat_Disease
+
+
+class RiceDView(ListView):
+    model = Rice_Disease
+class RiceView(DetailView):
+    model = Rice_Disease
+
+
+class PotatoDView(ListView):
+    model = Potato_Disease
+class PotatoView(DetailView):
+    model = Potato_Disease
+
+
+class GroundnutDView(ListView):
+    model = Groundnut_Disease
+class GroundnutView(DetailView):
+    model = Groundnut_Disease
+
+
+class PulsesDView(ListView):
+    model = Pulses_Disease
+class PulsesView(DetailView):
+    model = Pulses_Disease
+
+
+class TomatoDView(ListView):
+    model = Tomato_Disease
+class TomatoView(DetailView):
+    model = Tomato_Disease

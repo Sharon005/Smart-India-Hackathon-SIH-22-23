@@ -70,14 +70,14 @@
                     <!-- ***** Logo End ***** -->
                     <!-- ***** Menu Start ***** -->
                     <ul class="nav">
-                        <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
+                        <li><a href="{% url 'Web_APP:home' %}" class="active">Home</a></li>
                         <li class="has-sub">
                             <a href="javascript:void(0)">Information</a>
                             <ul class="sub-menu">
-                                <li><a href="{% url 'Web_APP:crops' %}">Crops</a></li>
-                                <li><a href="{% url 'Web_APP:crops' %}">Seeds</a></li>
-                                <li><a href="{% url 'Web_APP:crops' %}">Tools/Instruments</a></li>
-                            </ul>
+                              <li><a href="{% url 'Web_APP:crops' %}">Crops</a></li>                                  
+                              <li><a href="{% url 'Web_APP:disease' %}">Diseases</a></li>
+                              <li><a href="{% url 'Web_APP:crops' %}">Seeds</a></li>
+                          </ul>
                         </li>
                         <li class="scroll-to-section"><a href="#courses">Blog</a></li> 
                         <li class="scroll-to-section"><a href="#contact">Contact Us</a></li> 

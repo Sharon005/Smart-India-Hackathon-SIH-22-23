@@ -788,6 +788,7 @@ services
   text-align: center;
   color: #fff;
   padding: 40px;
+  min-height: 270px;
 }
 
 .services .item .icon {
@@ -1027,7 +1028,7 @@ apply now
 */
 
 section.apply-now {
-  background-image: url(../images/apply-bg.jpg);
+  background-image: url(../images/meetings-bg.jpg);
   background-position: center center;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -1038,6 +1039,7 @@ section.apply-now {
 section.apply-now .item {
   background-color: rgba(250,250,250,0.15);
   padding: 40px;
+  margin-top: 60%;
   margin-bottom: 30px;
 }
 
@@ -1838,4 +1840,63 @@ responsive
 {
   max-width: 90px;
   -webkit-font-smoothing: antialiased;
+}
+.ngo{
+  margin-top: -150px;
+  margin-bottom: -20px;
+  height: 250px;
+}
+
+.ngo .item .icon {
+  max-width: 60px;
+  margin: 0 auto;
+  position: relative;
+  align-items: center;
+  margin-left: 35%;
+}
+
+.ngo .item h3 {
+  margin-top: 10px;
+  margin-bottom: 15px;
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.ngo .down-content{
+  text-align: center;
+}
+
+.ngo .down-content:hover{
+ box-shadow: 2px 5px 5px 5px rgba(238, 238, 238, 0.829);
+
+ 
+}
+
+.ngo .item {
+height: 300px;
+}
+
+.use{
+  margin-top: 50px;
+}
+
+.us{
+  position: relative;
+  left: 60px;
+}
+
+.htext{
+
+position: relative;
+top: 70px;
+}
+
+.htext:hover{
+ box-shadow: 2px 5px 5px 5px rgba(238, 238, 238, 0.829);
+
+ 
+}
+
+.ngo .down-content1{
+  text-align: center;
 }

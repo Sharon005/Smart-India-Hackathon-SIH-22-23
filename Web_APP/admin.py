@@ -8,4 +8,5 @@ admin.site.register(Potato_Disease),
 admin.site.register(Groundnut_Disease),
 admin.site.register(Pulses_Disease),
 admin.site.register(Tomato_Disease),
+admin.site.register(ContactUS),
 

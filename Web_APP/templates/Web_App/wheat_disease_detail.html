@@ -50,14 +50,14 @@
                             <!-- ***** Logo End ***** -->
                             <!-- ***** Menu Start ***** -->
                             <ul class="nav">
-                                <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
+                                <li><a href="{% url 'Web_APP:home' %}" class="active">Home</a></li>
                                 <li class="has-sub">
                                     <a href="javascript:void(0)">Information</a>
                                     <ul class="sub-menu">
-                                        <li><a href="crops.html">Crops</a></li>
-                                        <li><a href="meeting-details.html">Seeds</a></li>
-                                        <li><a href="meeting-details.html">Tools/Instruments</a></li>
-                                    </ul>
+                                      <li><a href="{% url 'Web_APP:crops' %}">Crops</a></li>                                  
+                                      <li><a href="{% url 'Web_APP:disease' %}">Diseases</a></li>
+                                      <li><a href="{% url 'Web_APP:crops' %}">Seeds</a></li>
+                                  </ul>
                                 </li>
                                 <li class="scroll-to-section"><a href="#courses">Blog</a></li> 
                                 <li class="scroll-to-section"><a href="#contact">Contact Us</a></li> 
@@ -79,10 +79,11 @@
                   <div class="col-lg-12">
                     <div class="meeting-single-item">
                       <div class="thumb">
-                        <a href="meeting-details.html"><img class="thumbnail"  src="{{ wheat_disease.imageURL }}"></a>
+                        <img class="thumbnail"  src="{{ wheat_disease.imageURL }}" style="height: 400px;"  ></a>
                       </div>
+                      <br>
                       <div class="down-content">
-                        <h4>{{ wheat_disease.name }}</h4>
+                        <h1 style="text-align: center;" > {{ wheat_disease.name }}</h1>
                         <p class="description">{{ wheat_disease.desc }}
                         </p>
                         <div class="row">
@@ -97,7 +98,7 @@
                     </div>
                   </div>
                   </div>
-            </div>
+          </div>
           </div>
           <div class="footer">
            <p>Copyright © 2022 Farmer's Portal.Co, Ltd. All Rights Reserved. 
@@ -175,10 +176,5 @@
            <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
       
 
-    <img class="thumbnail" style="height: 8cm; width: 8cm; " src="{{ wheat_disease.imageURL }}">
-    <h1>{{ wheat_disease.name }}</h1>
-    <h2>{{ wheat_disease.desc }} </h2>
-    <h2>{{ wheat_disease.rem }} </h2>
-    
 </body>
 </html>

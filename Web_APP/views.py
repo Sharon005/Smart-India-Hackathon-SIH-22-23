@@ -2,10 +2,20 @@ from django.shortcuts import render
 from django.views.generic import ListView, DetailView
 from .models import *
 import joblib
-
+from django.contrib import messages
 # Create your views here.
 
 def home(request):
+    if request.method == "POST":
+        name = request.POST.get('name')
+        number = request.POST.get('number')
+        subject = request.POST.get('subject')
+        message = request.POST.get('message')
+
+        home = ContactUS(name=name, number=number, subject=subject, message=message,) 
+
+        home.save()
+        messages.success(request, 'Your form has been submitted!')
     return render(request, 'Web_App/index.html')
 
 def crops(request):
@@ -14,19 +24,21 @@ def crops(request):
 def disease(request):
     return render(request, 'Web_App/disease.html')
 
+
+
 def crop_result(request):
 
     cls = joblib.load('finalized_model.sav')
 
     lis = []
 
-    lis.append(request.GET['N'])
-    lis.append(request.GET['P'])
-    lis.append(request.GET['K'])
-    lis.append(request.GET['Temperature'])
-    lis.append(request.GET['Humiditiy'])
-    lis.append(request.GET['Ph'])
-    lis.append(request.GET['Rainfall'])
+    lis.append(request.GET['NITROGEN'])
+    lis.append(request.GET['PHOSPHORUS'])
+    lis.append(request.GET['POTASSIUM'])
+    lis.append(request.GET['TEMPERATURE'])
+    lis.append(request.GET['HUMIDITY'])
+    lis.append(request.GET['PH'])
+    lis.append(request.GET['RAINFALL'])
 
     ans = cls.predict([lis])
 

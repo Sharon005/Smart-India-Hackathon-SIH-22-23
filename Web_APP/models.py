@@ -4,8 +4,8 @@ from django.db import models
 class Wheat_Disease(models.Model):
     name  = models.CharField(max_length=100, null=True)
     image = models.ImageField(null=True, blank=True)
-    desc = models.CharField(max_length=300, null=True)
-    rem = models.CharField(max_length=300, null=True)
+    desc = models.TextField(max_length=3000, null=True)
+    rem = models.TextField(max_length=3000, null=True)
     slug = models.CharField(max_length=48)
 
     def __str__(self):
@@ -23,8 +23,8 @@ class Wheat_Disease(models.Model):
 class Rice_Disease(models.Model):
     name  = models.CharField(max_length=100, null=True)
     image = models.ImageField(null=True, blank=True)
-    desc = models.CharField(max_length=300, null=True)
-    rem = models.CharField(max_length=300, null=True)
+    desc = models.TextField(max_length=3000, null=True)
+    rem = models.TextField(max_length=3000, null=True)
     slug = models.CharField(max_length=48)
 
     def __str__(self):
@@ -42,8 +42,8 @@ class Rice_Disease(models.Model):
 class Potato_Disease(models.Model):
     name  = models.CharField(max_length=100, null=True)
     image = models.ImageField(null=True, blank=True)
-    desc = models.CharField(max_length=300, null=True)
-    rem = models.CharField(max_length=300, null=True)
+    desc = models.TextField(max_length=3000, null=True)
+    rem = models.TextField(max_length=3000, null=True)
     slug = models.CharField(max_length=48)
 
     def __str__(self):
@@ -61,8 +61,8 @@ class Potato_Disease(models.Model):
 class Groundnut_Disease(models.Model):
     name  = models.CharField(max_length=100, null=True)
     image = models.ImageField(null=True, blank=True)
-    desc = models.CharField(max_length=300, null=True)
-    rem = models.CharField(max_length=300, null=True)
+    desc = models.TextField(max_length=3000, null=True)
+    rem = models.TextField(max_length=3000, null=True)
     slug = models.CharField(max_length=48)
 
     def __str__(self):
@@ -80,8 +80,8 @@ class Groundnut_Disease(models.Model):
 class Pulses_Disease(models.Model):
     name  = models.CharField(max_length=100, null=True)
     image = models.ImageField(null=True, blank=True)
-    desc = models.CharField(max_length=300, null=True)
-    rem = models.CharField(max_length=300, null=True)
+    desc = models.TextField(max_length=3000, null=True)
+    rem = models.TextField(max_length=3000, null=True)
     slug = models.CharField(max_length=48)
 
     def __str__(self):
@@ -99,8 +99,8 @@ class Pulses_Disease(models.Model):
 class Tomato_Disease(models.Model):
     name  = models.CharField(max_length=100, null=True)
     image = models.ImageField(null=True, blank=True)
-    desc = models.CharField(max_length=300, null=True)
-    rem = models.CharField(max_length=300, null=True)
+    desc = models.TextField(max_length=3000, null=True)
+    rem = models.TextField(max_length=3000, null=True)
     slug = models.CharField(max_length=48)
 
     def __str__(self):
@@ -114,3 +114,11 @@ class Tomato_Disease(models.Model):
             url = ''
         return url
 
+class ContactUS(models.Model):
+    name  = models.CharField(max_length=100, null=True)
+    number = models.IntegerField()
+    subject  = models.CharField(max_length=100, null=True)
+    message  = models.CharField(max_length=100, null=True)
+
+    def __str__(self):
+        return self.subject
